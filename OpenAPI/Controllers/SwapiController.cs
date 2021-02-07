@@ -15,12 +15,13 @@ namespace OpenAPI.Controllers
     public class SwapiController : ControllerBase
     {
         /// <summary>
-        /// Gets all the Star Wars people
+        /// Returns all the Star Wars people
         /// </summary>
         /// <response code="200">Success</response>
         /// <response code="400">Invalid status value</response> 
         [HttpGet]
         [ProducesResponseType(typeof(SwapiResponse), 200)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Produces("application/json")]
         public IActionResult People()
         {

@@ -15,19 +15,20 @@ namespace OpenAPI.Controllers
     public class SearchController : ControllerBase
     {
         /// <summary>
-        /// Gets both the Chuck Norris and Star Wars APIs
+        /// Returns both the Chuck Norris and Star Wars search results
         /// </summary>
         /// <response code="200">Success</response>
         /// <response code="400">Invalid status value</response> 
         [HttpGet("{query}")]
-        [ProducesResponseType(typeof(SearchResponse), 200)]
+        [ProducesResponseType(typeof(SearchResult), 200)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Produces("application/json")]
         public IActionResult Index(string query)
         {
             if (string.IsNullOrEmpty(query))
                 return BadRequest();
 
-            var model = new SearchResponse();
+            var model = new SearchResult();
 
             var chuckClient = new RestClient($"https://api.chucknorris.io/jokes/search?query={query}");
             var chuckRequest = new RestRequest(Method.GET);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenAPI.Models.SearchModels
 {
-    public class SearchResponse
+    public class SearchResult
     {
         public ChuckSearchResponse Chuck_results { get; set; }
         public SwapiSearchResponse Swapi_results { get; set; }

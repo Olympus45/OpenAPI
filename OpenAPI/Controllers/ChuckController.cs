@@ -14,12 +14,13 @@ namespace OpenAPI.Controllers
     public class ChuckController : ControllerBase
     {
         /// <summary>
-        /// Gets all joke categories
+        /// Returns all joke categories
         /// </summary>
         /// <response code="200">Success</response>
         /// <response code="400">Invalid status value</response> 
         [HttpGet]
         [ProducesResponseType(typeof(List<string>), 200)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Produces("application/json")]
         public IActionResult Categories()
         {

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using RestSharp;
 
 namespace OpenAPI
 {
@@ -36,7 +37,7 @@ namespace OpenAPI
                     Version = "v1",
                     Description = "OpenAPI (formerly Swagger) compliant web service that abstracts away two downstream APIs; the Chuck Norris API and the Star Wars API.",
                     TermsOfService = null,
-                    Contact = new OpenApiContact { Name = "Olympas Mkhabela", Email = string.Empty, Url = new Uri("https://twitter.com/OlympusThrone")}
+                    Contact = new OpenApiContact { Name = "Olympas Mkhabela", Email = string.Empty, Url = new Uri("https://twitter.com/OlympusThrone") }
                 });
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -59,17 +60,34 @@ namespace OpenAPI
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseSwagger();
+            app.UseSwagger(options =>
+            {
+                options.PreSerializeFilters.Add((swagger, httpReq) =>
+                 {
+                     swagger.Servers = new List<OpenApiServer> 
+                     { 
+                         new OpenApiServer { Url = $"https://{httpReq.Host.Value}" },
+                         new OpenApiServer { Url = $"http://{httpReq.Host.Value}" }
+                     };
+                     swagger.Tags = new List<OpenApiTag>
+                     {
+                         new OpenApiTag { Name = "Chuck", Description = "Chuck Norris joke categories"},
+                         new OpenApiTag{Name="Swapi", Description = "Star Wars people"},
+                         new OpenApiTag{Name="Search"}
+                     };
+                 });
+            });
 
             app.UseSwaggerUI(options =>
             {

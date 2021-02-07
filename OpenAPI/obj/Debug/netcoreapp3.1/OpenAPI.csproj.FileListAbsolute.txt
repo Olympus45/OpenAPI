@@ -93,13 +93,13 @@ D:\development\Thronos Consolidated\OpenAPI\OpenAPI\bin\Debug\netcoreapp3.1\tr\M
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.csprojAssemblyReference.cache
-D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.AssemblyInfoInputs.cache
-D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.AssemblyInfo.cs
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.csproj.CoreCompileInputs.cache
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.RazorAssemblyInfo.cache
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.RazorAssemblyInfo.cs
+D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.AssemblyInfoInputs.cache
+D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.AssemblyInfo.cs
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.TagHelpers.input.cache
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.TagHelpers.output.cache
 D:\development\Thronos Consolidated\OpenAPI\OpenAPI\obj\Debug\netcoreapp3.1\OpenAPI.RazorCoreGenerate.cache

@@ -6,21 +6,21 @@
     <members>
         <member name="M:OpenAPI.Controllers.ChuckController.Categories">
             <summary>
-            Gets all joke categories
+            Returns all joke categories
             </summary>
             <response code="200">Success</response>
             <response code="400">Invalid status value</response> 
         </member>
         <member name="M:OpenAPI.Controllers.SearchController.Index(System.String)">
             <summary>
-            Gets both the Chuck Norris and Star Wars APIs
+            Returns both the Chuck Norris and Star Wars search results
             </summary>
             <response code="200">Success</response>
             <response code="400">Invalid status value</response> 
         </member>
         <member name="M:OpenAPI.Controllers.SwapiController.People">
             <summary>
-            Gets all the Star Wars people
+            Returns all the Star Wars people
             </summary>
             <response code="200">Success</response>
             <response code="400">Invalid status value</response> 
